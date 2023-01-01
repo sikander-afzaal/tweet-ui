@@ -5,8 +5,10 @@ import "./Tweet.css";
 const Tweet = () => {
   const [selectAll, setSelectAll] = useState(false);
   const [selectAllCom, setSelectAllCom] = useState(false);
+  const [addModal, setAddModal] = useState(false);
   return (
     <div className="tweet">
+      {addModal && <AddModal setModal={setAddModal} />}
       <Link to={"/"} className="back-btn">
         Back
       </Link>
@@ -16,52 +18,52 @@ const Tweet = () => {
       <div className="tweet-col">
         <h2>Twitter Accounts</h2>
         <div className="add-grid">
-          <div className="add-div">
+          <div className="add-div" onClick={() => setAddModal(true)}>
             <p>Add</p>
           </div>
-          <div className="add-div">
+          <div className="add-div" onClick={() => setAddModal(true)}>
             <p>Add</p>
           </div>
-          <div className="add-div">
+          <div className="add-div" onClick={() => setAddModal(true)}>
             <p>Add</p>
           </div>
-          <div className="add-div">
+          <div className="add-div" onClick={() => setAddModal(true)}>
             <p>Add</p>
           </div>
-          <div className="add-div">
+          <div className="add-div" onClick={() => setAddModal(true)}>
             <p>Add</p>
           </div>
-          <div className="add-div">
+          <div className="add-div" onClick={() => setAddModal(true)}>
             <p>Add</p>
           </div>
-          <div className="add-div">
+          <div className="add-div" onClick={() => setAddModal(true)}>
             <p>Add</p>
           </div>
-          <div className="add-div">
+          <div className="add-div" onClick={() => setAddModal(true)}>
             <p>Add</p>
           </div>
-          <div className="add-div">
+          <div className="add-div" onClick={() => setAddModal(true)}>
             <p>Add</p>
           </div>
-          <div className="add-div">
+          <div className="add-div" onClick={() => setAddModal(true)}>
             <p>Add</p>
           </div>
-          <div className="add-div">
+          <div className="add-div" onClick={() => setAddModal(true)}>
             <p>Add</p>
           </div>
-          <div className="add-div">
+          <div className="add-div" onClick={() => setAddModal(true)}>
             <p>Add</p>
           </div>
-          <div className="add-div">
+          <div className="add-div" onClick={() => setAddModal(true)}>
             <p>Add</p>
           </div>
-          <div className="add-div">
+          <div className="add-div" onClick={() => setAddModal(true)}>
             <p>Add</p>
           </div>
-          <div className="add-div">
+          <div className="add-div" onClick={() => setAddModal(true)}>
             <p>Add</p>
           </div>
-          <div className="add-div">
+          <div className="add-div" onClick={() => setAddModal(true)}>
             <p>Add</p>
           </div>
         </div>
@@ -213,5 +215,41 @@ const RandomComment = ({ selectAllCom, idx }) => {
         )}
       </div>
     </div>
+  );
+};
+
+const AddModal = ({ setModal }) => {
+  return (
+    <>
+      <div onClick={() => setModal(false)} className="overlay"></div>
+      <form className="add-modal">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth={1.5}
+          stroke="black"
+          onClick={() => setModal(false)}
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+
+        <h2>Add Account</h2>
+        <input type="email" placeholder="Email" />
+        <input type="password" placeholder="Password" />
+        <button
+          onClick={(e) => {
+            e.preventDefault();
+            setModal(false);
+          }}
+        >
+          Add
+        </button>
+      </form>
+    </>
   );
 };
