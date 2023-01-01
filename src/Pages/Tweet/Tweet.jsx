@@ -10,6 +10,9 @@ const Tweet = () => {
       <Link to={"/"} className="back-btn">
         Back
       </Link>
+      <Link to={"/"} className="next-btn">
+        Next
+      </Link>
       <div className="tweet-col">
         <h2>Twitter Accounts</h2>
         <div className="add-grid">
