@@ -1,0 +1,12 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+:root {
+  --blue: #2000a6;
+  --pink: #d90075;
+}
+body {
+  background-image: linear-gradient(to right, var(--blue), var(--pink));
+}

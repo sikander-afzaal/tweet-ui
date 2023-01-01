@@ -1,0 +1,214 @@
+.tweet {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1600px;
+  margin: auto;
+  gap: 20px;
+  padding-top: 120px;
+  padding-inline: 20px;
+  padding-bottom: 40px;
+  position: relative;
+}
+.back-btn {
+  position: absolute;
+  top: 30px;
+  left: 20px;
+  border: none;
+  background-color: #ff00ff;
+  border-radius: 100vh;
+  width: 130px;
+  height: 40px;
+  color: black;
+  font-size: 20px;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  text-decoration: none;
+  font-weight: 500;
+}
+.tweet-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+}
+.tweet-col h2 {
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ff96d5;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #e359b8;
+}
+.add-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+}
+.add-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ff01ff;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.add-div p {
+  user-select: none;
+  font-size: 18px;
+  font-weight: 600;
+}
+.target-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-direction: column;
+}
+.target-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.target-row p {
+  font-size: 18px;
+}
+.target-row input,
+.tweet-col textarea {
+  background-color: #ff00ff;
+  color: black;
+  font-size: 18px;
+  border-radius: 100vh;
+  border: none;
+  outline: none;
+  padding-left: 20px;
+  height: 40px;
+  width: 100%;
+  max-width: 300px;
+}
+.tweet-col textarea {
+  resize: none;
+  border-radius: 10px;
+  height: 400px;
+  width: 400px;
+  max-width: 500px;
+  padding-top: 20px;
+}
+.check {
+  width: 40px;
+  min-width: 40px;
+  cursor: pointer;
+  background-color: #ff00ff;
+  border-radius: 50%;
+  height: 40px;
+  display: grid;
+  place-items: center;
+}
+.check svg {
+  width: 20px;
+  pointer-events: none;
+  height: 20px;
+}
+.select-all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.select-all p {
+  color: white;
+  width: 100%;
+  text-align: center;
+  font-size: 23px;
+  line-height: 1;
+}
+.upload {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  border-radius: 10px;
+  width: 100%;
+  background-color: #ff00ff;
+}
+.upload label {
+  text-transform: uppercase;
+  color: black;
+  font-size: 25px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  font-weight: 600;
+}
+.upload input {
+  appearance: none;
+  display: none;
+  -webkit-appearance: none;
+}
+.tweet-btn {
+  text-transform: uppercase;
+  border-radius: 100vh;
+  cursor: pointer;
+  height: 50px;
+  border: none;
+  background-color: #01ffff;
+  font-size: 25px;
+  width: 100%;
+}
+@media screen and (max-width: 1500px) {
+  .tweet {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    row-gap: 90px;
+    column-gap: 60px;
+  }
+  .target-row input {
+    width: 100%;
+    max-width: 100%;
+  }
+  .tweet-col textarea {
+    width: 100%;
+    max-width: 100%;
+  }
+  .tweet-col {
+    width: 100%;
+  }
+  .target-col {
+    width: 100%;
+  }
+  .target-row {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 851px) {
+  .tweet {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    row-gap: 90px;
+    padding-top: 100px;
+  }
+}
+@media screen and (max-width: 430px) {
+  .add-div {
+    width: 60px;
+    height: 60px;
+  }
+  .add-div p {
+    font-size: 15px;
+  }
+  .tweet-col h2 {
+    font-size: 28px;
+  }
+}
